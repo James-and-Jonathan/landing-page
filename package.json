@@ -2,7 +2,7 @@
   "name": "james-and-jonathan-landing-page",
   "packageManager": "yarn@4.2.2",
   "scripts": {
-    "check-codestyle": "prettier --check web"
+    "check-codestyle": "prettier --check docs"
   },
   "devDependencies": {
     "prettier": "3.3.1"
