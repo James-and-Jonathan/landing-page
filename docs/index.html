@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>James and Jonathan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,13 +35,23 @@
       body {
         display: flex;
         flex-direction: column;
-        gap: calc(15 * var(--spacing));
+        gap: calc(6 * var(--spacing));
+      }
+
+      /* adjust for bigger resolution (mobile L) */
+      @media (width > 425px) {
+        html {
+          font-size: 125%;
+        }
+
+        body {
+          gap: calc(15 * var(--spacing));
+        }
       }
 
       header {
-        padding: calc(4 * var(--spacing));
-
-        font-size: 1.25rem;
+        padding-inline: calc(4 * var(--spacing));
+        padding-block-start: calc(2 * var(--spacing));
       }
 
       .section {
@@ -51,7 +62,7 @@
         align-self: center;
         padding-inline: calc(4 * var(--spacing));
 
-        font-size: 1.3125rem;
+        font-size: 1.25rem;
         line-height: 1.7;
         text-align: center;
         text-wrap: balance;
@@ -61,14 +72,15 @@
         align-self: center;
         padding-inline: calc(4 * var(--spacing));
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: calc(20 * var(--spacing));
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc(4 * var(--spacing)) calc(8 * var(--spacing));
 
         a {
+          flex: 1;
           padding: calc(2 * var(--spacing)) calc(8 * var(--spacing));
+          min-inline-size: calc(25 * var(--spacing));
 
-          font-size: 1.25rem;
           border-radius: calc(infinity * 1px);
           color: white;
           text-decoration: none;

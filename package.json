@@ -2,9 +2,11 @@
   "name": "james-and-jonathan-landing-page",
   "packageManager": "yarn@4.2.2",
   "scripts": {
+    "dev": "live-server --no-browser --host=0.0.0.0 docs",
     "check-codestyle": "prettier --check docs"
   },
   "devDependencies": {
+    "live-server": "1.2.2",
     "prettier": "3.3.1"
   }
 }
