@@ -7,10 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <style>
+      @font-face {
+        font-family: europa;
+        src: url("l.woff2") format("woff2");
+      }
+
       *,
       *::before,
       *::after {
@@ -22,55 +27,51 @@
       }
 
       html {
-        font-family: "Montserrat", sans-serif;
+        font-family: "europa", sans-serif;
         font-weight: 600;
 
         --spacing: 8px;
-        --section-inline-size: calc(120 * var(--spacing));
 
-        --color-margaret-maytime: #ff7cba;
+        --color-margaret-maytime: #ff85ba;
         --color-vibrant-aqua: #2ceb97;
       }
 
       body {
         display: flex;
         flex-direction: column;
-        gap: calc(6 * var(--spacing));
-      }
-
-      /* adjust for bigger resolution (mobile L) */
-      @media (width > 425px) {
-        html {
-          font-size: 125%;
-        }
-
-        body {
-          gap: calc(15 * var(--spacing));
-        }
       }
 
       header {
-        padding-inline: calc(4 * var(--spacing));
-        padding-block-start: calc(2 * var(--spacing));
-      }
+        font-size: 1.625rem;
+        line-height: 1.2em;
+        letter-spacing: 0.02em;
 
-      .section {
-        max-inline-size: var(--section-inline-size);
+        margin-block-start: 3vw;
+        padding-inline: 3vw;
       }
 
       #hero {
-        align-self: center;
-        padding-inline: calc(4 * var(--spacing));
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 23vh;
+        max-width: 67vw;
 
-        font-size: 1.25rem;
-        line-height: 1.7;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2.55208333vw;
+        line-height: 1.8em;
+        letter-spacing: 0;
+        text-rendering: optimizeLegibility;
         text-align: center;
-        text-wrap: balance;
       }
 
       #nav-group {
+        margin-top: 23vh;
         align-self: center;
         padding-inline: calc(4 * var(--spacing));
+
+        font-size: 1.625rem;
 
         display: flex;
         flex-wrap: wrap;
@@ -78,13 +79,19 @@
 
         a {
           flex: 1;
-          padding: calc(2 * var(--spacing)) calc(8 * var(--spacing));
-          min-inline-size: calc(25 * var(--spacing));
+          padding: calc(1.5 * var(--spacing)) calc(8 * var(--spacing));
+          min-inline-size: calc(32 * var(--spacing));
 
+          border: 4px solid var(--solid-color);
           border-radius: calc(infinity * 1px);
-          color: white;
+          color: var(--solid-color);
           text-decoration: none;
           text-align: center;
+
+          &:hover {
+            color: white;
+            background-color: var(--solid-color);
+          }
         }
       }
     </style>
@@ -93,20 +100,25 @@
     <header>
       <span style="color: var(--color-margaret-maytime)">James</span>
       <span style="color: #7bebfb">&</span>
-      <span style="color: var(--color-vibrant-aqua)">Jon</span>
+      <span style="color: var(--color-vibrant-aqua)">Jonathan</span>
     </header>
-    <p id="hero" class="section">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet
-      ligula commodo, aliquam est quis, laoreet quam. Phasellus ultrices eros eu
-      arcu scelerisque, vitae lacinia erat condimentum. Suspendisse velit ex,
-      viverra sed tincidunt sed, ultrices nec magna. Maecenas tempus iaculis
-      magna, nec consequat neque molestie ut.
+    <p id="hero">
+      We're <span style="color: var(--color-margaret-maytime)">James</span>
+      <span style="color: #7bebfb">&</span>
+      <span style="color: var(--color-vibrant-aqua)">Jonathan</span>, a creative
+      team with over 20 years experience in the industry working with heavy
+      hitters to plucky upstarts, and even direct with clients. Specialising in
+      human-centric content that puts a smile on your face, we connect your
+      products to customers in a way they can't ignore. Come and take a peek at
+      our best bits
     </p>
-    <div id="nav-group" class="section">
-      <a href="#" style="background-color: var(--color-margaret-maytime)"
+    <div id="nav-group">
+      <a
+        href="https://www.jameswkemp.com/"
+        style="--solid-color: var(--color-margaret-maytime)"
         >James</a
       >
-      <a href="#" style="background-color: var(--color-vibrant-aqua)">Jon</a>
+      <a href="#" style="--solid-color: var(--color-vibrant-aqua)">Jonathan</a>
     </div>
   </body>
 </html>
