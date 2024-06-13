@@ -42,12 +42,23 @@
       }
 
       header {
+        padding-block-start: 3vw;
+        padding-inline: 3vw;
+
         font-size: 1.625rem;
         line-height: 1.2em;
         letter-spacing: 0.02em;
+      }
 
-        margin-block-start: 3vw;
-        padding-inline: 3vw;
+      @media only screen and (max-width: 768px) {
+        header {
+          padding-block-start: 4vw;
+          padding-inline: 4vw;
+
+          font-size: 20px;
+          line-height: 1.8em;
+          letter-spacing: 0;
+        }
       }
 
       #hero {
@@ -64,6 +75,15 @@
         letter-spacing: 0;
         text-rendering: optimizeLegibility;
         text-align: center;
+      }
+
+      @media screen and (max-aspect-ratio: 1 / 1) and (max-width: 940px) {
+        #hero {
+          max-width: 100%;
+          padding-inline: 4vw;
+
+          font-size: 24px;
+        }
       }
 
       #nav-group {
