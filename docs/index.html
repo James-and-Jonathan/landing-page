@@ -37,36 +37,19 @@
       }
 
       body {
+        min-block-size: 100svh;
+
         display: flex;
         flex-direction: column;
-      }
-
-      header {
-        padding-block-start: 3vw;
-        padding-inline: 3vw;
-
-        font-size: 1.625rem;
-        line-height: 1.2em;
-        letter-spacing: 0.02em;
-      }
-
-      @media only screen and (max-width: 768px) {
-        header {
-          padding-block-start: 4vw;
-          padding-inline: 4vw;
-
-          font-size: 20px;
-          line-height: 1.8em;
-          letter-spacing: 0;
-        }
+        justify-content: space-around;
+        gap: calc(2 * var(--spacing));
       }
 
       #hero {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 23vh;
-        max-width: 67vw;
+        max-inline-size: 67vw;
 
         font-weight: 700;
         font-style: normal;
@@ -77,32 +60,22 @@
         text-align: center;
       }
 
-      @media screen and (max-aspect-ratio: 1 / 1) and (max-width: 940px) {
-        #hero {
-          max-width: 100%;
-          padding-inline: 4vw;
-
-          font-size: 24px;
-        }
-      }
-
       #nav-group {
-        margin-top: 23vh;
         align-self: center;
+        justify-content: center;
         padding-inline: calc(4 * var(--spacing));
 
-        font-size: 1.625rem;
+        font-size: 2.3394097192vw;
 
         display: flex;
         flex-wrap: wrap;
         gap: calc(4 * var(--spacing)) calc(8 * var(--spacing));
 
         a {
-          flex: 1;
           padding: calc(1.5 * var(--spacing)) calc(8 * var(--spacing));
           min-inline-size: calc(32 * var(--spacing));
 
-          border: 4px solid var(--solid-color);
+          border: 0.09090909091em solid var(--solid-color);
           border-radius: calc(infinity * 1px);
           color: var(--solid-color);
           text-decoration: none;
@@ -114,14 +87,22 @@
           }
         }
       }
+
+      @media screen and (max-aspect-ratio: 1 / 1) and (max-width: 940px) {
+        #hero {
+          max-inline-size: 100%;
+          padding-inline: 4vw;
+
+          font-size: 1.5rem;
+        }
+
+        #nav-group {
+          font-size: 1.375rem;
+        }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <span style="color: var(--color-margaret-maytime)">James</span>
-      <span style="color: #7bebfb">&</span>
-      <span style="color: var(--color-vibrant-aqua)">Jonathan</span>
-    </header>
     <p id="hero">
       We're <span style="color: var(--color-margaret-maytime)">James</span>
       <span style="color: #7bebfb">&</span>
@@ -130,7 +111,7 @@
       hitters to plucky upstarts, and even direct with clients. Specialising in
       human-centric content that puts a smile on your face, we connect your
       products to customers in a way they can't ignore. Come and take a peek at
-      our best bits
+      our best bits 👀
     </p>
     <div id="nav-group">
       <a
