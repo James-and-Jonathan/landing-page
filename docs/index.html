@@ -47,8 +47,8 @@
 
       #hero {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin-inline: auto;
+        margin-block-start: calc(2.5 * 1em);
         max-inline-size: 67vw;
 
         font-weight: 700;
@@ -73,9 +73,9 @@
 
         a {
           padding: calc(1.5 * var(--spacing)) calc(8 * var(--spacing));
-          min-inline-size: calc(32 * var(--spacing));
+          min-inline-size: calc(10 * 1em);
 
-          border: 0.09090909091em solid var(--solid-color);
+          border: 0.0909em solid var(--solid-color);
           border-radius: calc(infinity * 1px);
           color: var(--solid-color);
           text-decoration: none;
